@@ -8,6 +8,9 @@ import 'Screens/Challenge_Screen.dart';
 import 'Screens/Search_Result.dart';
 import 'Screens/bottom_Nav_Bar_Screens/Reel_Making_Screen.dart';
 import 'Screens/Profile_page.dart';
+import 'Screens/Message_Screen.dart';
+import 'Screens/Notification Page.dart';
+import 'Screens/Follow_Request_Screen.dart';
   void main() {
   runApp(const MyApp());
 }
@@ -33,6 +36,9 @@ class MyApp extends StatelessWidget {
         'Challenge' : (context) => Challenge(),
         'Reel1' : (context) => Reel(),
         'profile' : (context) => Profile(),
+        'message' : (context) => Message(),
+        'notification' : (context) => notification(),
+        'follow' : (context) => followRequest(),
       },
     );
   }

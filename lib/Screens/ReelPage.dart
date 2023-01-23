@@ -171,47 +171,57 @@ class _Reel1State extends State<Reel1> {
         elevation: 0,
         child: ListView(
           children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.yellow),
-              ),
-              child: Row(
-                children: [
-                  Stack(children: [
-                    CircleAvatar(
-                      radius: 22,
-                      backgroundColor: Colors.white,
-                    ),
-                    Positioned(
-                      top: 22,
-                      left: 22,
-                      child: Container(
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.yellow,
-                        ),
-                        child: Icon(Icons.add),
+            InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, 'profile2');
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.yellow),
+                ),
+                child: Row(
+                  children: [
+                    Stack(children: [
+                      CircleAvatar(
+                        radius: 22,
+                        backgroundColor: Colors.white,
                       ),
+                      Positioned(
+                        top: 22,
+                        left: 22,
+                        child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.yellow,
+                          ),
+                          child: Icon(Icons.add),
+                        ),
+                      ),
+                    ]),
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      child: Text('USER NAME'),
                     ),
-                  ]),
-                  Container(
-                    margin: EdgeInsets.only(left: 10),
-                    child: Text('USER NAME'),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5),
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.yellow),
+            InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, 'messanger');
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.yellow),
+                ),
+                child: Text('Message Box'),
               ),
-              child: Text('Message Box'),
             ),
             Container(
               margin: EdgeInsets.only(top: 5),

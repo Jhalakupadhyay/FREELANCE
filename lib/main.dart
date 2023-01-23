@@ -11,6 +11,12 @@ import 'Screens/Profile_page.dart';
 import 'Screens/Message_Screen.dart';
 import 'Screens/Notification Page.dart';
 import 'Screens/Follow_Request_Screen.dart';
+import 'Screens/Profile_Screen_2.dart';
+import 'Screens/Post_Page.dart';
+import 'Screens/Likes_Page.dart';
+import 'Screens/Comment_page.dart';
+import 'Screens/Messanger_Screen.dart';
+import 'Screens/Transaction_Screen.dart';
   void main() {
   runApp(const MyApp());
 }
@@ -39,6 +45,12 @@ class MyApp extends StatelessWidget {
         'message' : (context) => Message(),
         'notification' : (context) => notification(),
         'follow' : (context) => followRequest(),
+        'profile2' : (context) => Profile2(),
+        'post' : (context) => post(),
+        'likes' : (context) => Likes(),
+        'Comment' : (context) => Comment(),
+        'messanger' : (context) => Messanger(),
+        'transaction' : (context) => Transaction(),
       },
     );
   }

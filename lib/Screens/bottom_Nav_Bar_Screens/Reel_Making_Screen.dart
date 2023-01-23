@@ -12,6 +12,7 @@ class _ReelState extends State<Reel> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      body: Center(child: Text("Apply The required camera package",style: TextStyle(color: Colors.black),),),
     );
   }
 }

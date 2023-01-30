@@ -14,7 +14,9 @@ class _ChallengeState extends State<Challenge> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('Challenge'),
+        title: Text('Challenge',style: TextStyle(
+          fontSize: 25
+        ),),
         centerTitle: true,
       ),
       body: Stack(
@@ -33,6 +35,8 @@ class _ChallengeState extends State<Challenge> {
                   ),
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       margin: EdgeInsets.only(bottom: 5),
@@ -163,12 +167,12 @@ class _ChallengeState extends State<Challenge> {
               alignment: Alignment.center,
               margin: EdgeInsets.only(bottom: 70),
               height: 40,
-              width: MediaQuery.of(context).size.width/3,
+              width: MediaQuery.of(context).size.width/2,
               decoration: BoxDecoration(
-                color: Colors.yellow[800],
+                color: Color.fromRGBO(255, 176, 0, 1),
                 borderRadius: BorderRadius.circular(10)
               ),
-              child: Text('Create Video',style: TextStyle(color: Colors.black),),
+              child: Text('Create Video',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),),
             ),
           ),
         ]

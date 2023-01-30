@@ -34,24 +34,28 @@ class _postState extends State<post> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Divider(
-            color: Colors.yellow,
+            color: Color.fromRGBO(255, 176, 0, 1),
             thickness: 2,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                margin: EdgeInsets.only(left: 10),
-                child: CircleAvatar(
-                  radius: 20,
-                  backgroundColor: Colors.white,
-                ),
+              Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: CircleAvatar(
+                      radius: 20,
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: Text('First User Name'),
+                  ),
+                ],
               ),
               Container(
-                margin: EdgeInsets.only(left: 10),
-                child: Text('First User Name'),
-              ),
-              Container(
-                  margin: EdgeInsets.only(left: 170),
                   child: IconButton(
                       onPressed: () {
                         showModalBottomSheet(
@@ -155,7 +159,7 @@ class _postState extends State<post> {
                   fontWeight: FontWeight.bold),),
             ),
             Divider(
-              color: Colors.yellow,
+              color: Color.fromRGBO(255, 176, 0, 1),
               thickness: 3,
             ),
             Container(
@@ -166,7 +170,7 @@ class _postState extends State<post> {
                   fontWeight: FontWeight.bold),),
             ),
             Divider(
-              color: Colors.yellow,
+              color: Color.fromRGBO(255, 176, 0, 1),
               thickness: 3,
             ),
             Container(
@@ -177,7 +181,7 @@ class _postState extends State<post> {
                   fontWeight: FontWeight.bold),),
             ),
             Divider(
-              color: Colors.yellow,
+              color: Color.fromRGBO(255, 176, 0, 1),
               thickness: 3,
             ),
           ],

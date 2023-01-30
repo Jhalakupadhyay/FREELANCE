@@ -13,27 +13,34 @@ class _UserState extends State<User> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 10,left: 10),
-                child: CircleAvatar(
-                  radius: 25,
-                  backgroundColor: Colors.white,
-                ),
-              ),
-              Column(
+          InkWell(
+            onTap: (){
+              Navigator.pushNamed(context, 'profile');
+            },
+            child: Container(
+              child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 10,bottom: 5,top: 5),
-                    child: Text('User name'),//use a variable for name.
+                    margin: EdgeInsets.only(top: 10,left: 10),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.white,
+                    ),
                   ),
-                  Container(
-                    child: Text('Caption',style: TextStyle(fontSize: 11),),
+                  Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(left: 10,bottom: 5,top: 5),
+                        child: Text('User name'),//use a variable for name.
+                      ),
+                      Container(
+                        child: Text('Caption',style: TextStyle(fontSize: 11),),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
+            ),
           ),
           Row(
             children: [

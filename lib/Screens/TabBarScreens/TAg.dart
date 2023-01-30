@@ -13,28 +13,35 @@ class _TagState extends State<Tag> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 10,left: 10),
-                child: CircleAvatar(
-                  child: Text('#',style: TextStyle(fontSize: 30),),
-                  radius: 25,
-                  backgroundColor: Colors.white,
-                ),
-              ),
-              Column(
+          InkWell(
+            onTap: (){
+              Navigator.pushNamed(context, 'tagS');
+            },
+            child: Container(
+              child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 10,bottom: 5,top: 5),
-                    child: Text('#Tags'),//use a variable for name.
+                    margin: EdgeInsets.only(top: 10,left: 10),
+                    child: CircleAvatar(
+                      child: Text('#',style: TextStyle(fontSize: 30),),
+                      radius: 25,
+                      backgroundColor: Colors.white,
+                    ),
                   ),
-                  Container(
-                    child: Text('Caption',style: TextStyle(fontSize: 11),),
+                  Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(left: 10,bottom: 5,top: 5),
+                        child: Text('#Tags'),//use a variable for name.
+                      ),
+                      Container(
+                        child: Text('Caption',style: TextStyle(fontSize: 11),),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
+            ),
           ),
           Row(
             children: [

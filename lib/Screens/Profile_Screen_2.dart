@@ -33,7 +33,10 @@ class _Profile2State extends State<Profile2>
         backgroundColor: Color.fromRGBO(60, 52, 94, 1),
         elevation: 0,
         actions: [IconButton(onPressed: () {
-        }, icon: Icon(Icons.more_horiz_rounded),)],
+          Navigator.pushNamed(context, 'Edit');
+        }, icon:  Image(image: AssetImage('Images/option_icon..png'),
+          height: 32,
+          width: 32,),)],
       ),
       body: Column(children: [
         Stack(children: [
@@ -67,7 +70,7 @@ class _Profile2State extends State<Profile2>
                           child: Container(
                             child: Icon(
                               Icons.verified,
-                              color: Colors.yellow,
+                              color: Color.fromRGBO(255, 176, 0, 1),
                               size: 35,
                             ),
                           )),
@@ -80,7 +83,7 @@ class _Profile2State extends State<Profile2>
                       child: Text(
                         'Follower',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold),
+                            fontSize: 12, fontWeight: FontWeight.bold),
                       ),
                     ),
                     VerticalDivider(
@@ -88,14 +91,14 @@ class _Profile2State extends State<Profile2>
                       indent: 15,
                       endIndent: 15,
                       width: 25,
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     Container(
                       alignment: Alignment.center,
                       child: Text(
                         'Following',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold),
+                            fontSize: 12, fontWeight: FontWeight.bold),
                       ),
                     ),
                     VerticalDivider(
@@ -103,14 +106,14 @@ class _Profile2State extends State<Profile2>
                       indent: 15,
                       endIndent: 15,
                       width: 25,
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     Container(
                       alignment: Alignment.center,
                       child: Text(
                         'Views',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold),
+                            fontSize: 12, fontWeight: FontWeight.bold),
                       ),
                     ),
                     VerticalDivider(
@@ -118,14 +121,14 @@ class _Profile2State extends State<Profile2>
                       indent: 15,
                       endIndent: 15,
                       width: 25,
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     Container(
                       alignment: Alignment.center,
                       child: Text(
                         'Wins',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold),
+                            fontSize: 12, fontWeight: FontWeight.bold),
                       ),
                     )
                   ],
@@ -147,7 +150,11 @@ class _Profile2State extends State<Profile2>
           ),
         ]),
         SizedBox(height: 10,),
-        TabBar(controller: _tabController, tabs: [
+        TabBar(
+          labelColor: Color.fromRGBO(255, 176, 0, 1),
+          indicatorColor: Color.fromRGBO(255, 176, 0, 1),
+            labelPadding: EdgeInsets.all(4),
+            controller: _tabController, tabs: [
           Container(
             padding: EdgeInsets.all(4),
             decoration: BoxDecoration(
@@ -156,29 +163,15 @@ class _Profile2State extends State<Profile2>
             ),
             child: Icon(
               MyFlutterApp.th_large,
-              color: Colors.yellow,
+              color: Color.fromRGBO(255, 176, 0, 1),
             ),
           ),
-          Container(
-            padding: EdgeInsets.all(4),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Icon(
-              MyFlutterApp.play,
-              color: Colors.yellow,
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.all(4),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5), color: Colors.white),
-            child: Icon(
-              Icons.tag,
-              color: Colors.yellow,
-            ),
-          ),
+          Image(image: AssetImage('Images/Play_button.png'),
+          height: 32,
+          width: 32,),
+          Image(image: AssetImage('Images/Message_icon.png'),
+            height: 32,
+            width: 32,),
           Container(
             padding: EdgeInsets.all(4),
             decoration: BoxDecoration(
@@ -186,8 +179,8 @@ class _Profile2State extends State<Profile2>
               color: Colors.white,
             ),
             child: Icon(
-              MyFlutterApp.bookmark_empty,
-              color: Colors.yellow,
+              MyFlutterApp.bookmark,
+              color: Color.fromRGBO(255, 176, 0, 1),
             ),
           ),
           Container(
@@ -198,7 +191,7 @@ class _Profile2State extends State<Profile2>
             ),
             child: Icon(
               MyFlutterApp.dollar,
-              color: Colors.yellow,
+              color: Color.fromRGBO(255, 176, 0, 1),
             ),
           ),
         ]),
@@ -412,53 +405,55 @@ class _Profile2State extends State<Profile2>
                 ),
               ),
               SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.all(8),
-                          height: MediaQuery.of(context).size.height/3.5,
-                          width: MediaQuery.of(context).size.width/3.5,
-                          color: Colors.white,
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(8),
-                          height: MediaQuery.of(context).size.height/3.5,
-                          width: MediaQuery.of(context).size.width/3.5,
-                          color: Colors.white,
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(8),
-                          height: MediaQuery.of(context).size.height/3.5,
-                          width: MediaQuery.of(context).size.width/3.5,
-                          color: Colors.white,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.all(8),
-                          height: MediaQuery.of(context).size.height/3.5,
-                          width: MediaQuery.of(context).size.width/3.5,
-                          color: Colors.white,
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(8),
-                          height: MediaQuery.of(context).size.height/3.5,
-                          width: MediaQuery.of(context).size.width/3.5,
-                          color: Colors.white,
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(8),
-                          height: MediaQuery.of(context).size.height/3.5,
-                          width: MediaQuery.of(context).size.width/3.5,
-                          color: Colors.white,
-                        ),
-                      ],
-                    ),
-                  ],
+                child: Expanded(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.all(8),
+                            height: MediaQuery.of(context).size.height/3.5,
+                            width: MediaQuery.of(context).size.width/3.5,
+                            color: Colors.white,
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(8),
+                            height: MediaQuery.of(context).size.height/3.5,
+                            width: MediaQuery.of(context).size.width/3.5,
+                            color: Colors.white,
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(8),
+                            height: MediaQuery.of(context).size.height/3.5,
+                            width: MediaQuery.of(context).size.width/3.5,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.all(8),
+                            height: MediaQuery.of(context).size.height/3.5,
+                            width: MediaQuery.of(context).size.width/3.5,
+                            color: Colors.white,
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(8),
+                            height: MediaQuery.of(context).size.height/3.5,
+                            width: MediaQuery.of(context).size.width/3.5,
+                            color: Colors.white,
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(8),
+                            height: MediaQuery.of(context).size.height/3.5,
+                            width: MediaQuery.of(context).size.width/3.5,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ]),)
@@ -493,7 +488,7 @@ class _Profile2State extends State<Profile2>
               fontWeight: FontWeight.bold),),
         ),
         Divider(
-          color: Colors.yellow,
+          color: Color.fromRGBO(255, 176, 0, 1),
           thickness: 3,
         ),
         Container(
@@ -504,7 +499,7 @@ class _Profile2State extends State<Profile2>
               fontWeight: FontWeight.bold),),
         ),
         Divider(
-          color: Colors.yellow,
+          color: Color.fromRGBO(255, 176, 0, 1),
           thickness: 3,
         ),
       ],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freelance/Screens/Home.dart';
 import 'package:freelance/Screens/PhoneSignin.dart';
+import 'package:freelance/Screens/Setting_Screen.dart';
+import 'package:freelance/Screens/TabBarScreens/TAg.dart';
 import 'Screens/Signin.dart';
 import 'Screens/ReelPage.dart';
 import 'Screens/Search_Screen.dart';
@@ -17,6 +19,13 @@ import 'Screens/Likes_Page.dart';
 import 'Screens/Comment_page.dart';
 import 'Screens/Messanger_Screen.dart';
 import 'Screens/Transaction_Screen.dart';
+import 'Screens/Earn_Mone_Screen.dart';
+import 'Screens/Challenge_Screen_2.dart';
+import 'Screens/Language_Screen.dart';
+import 'Screens/Reffral_Screen.dart';
+import 'Screens/TabBarScreens/Tags_Screen.dart';
+import 'Screens/TabBarScreens/Audio_Screen.dart';
+import 'Screens/Edit_Profile_Page.dart';
   void main() {
   runApp(const MyApp());
 }
@@ -51,6 +60,14 @@ class MyApp extends StatelessWidget {
         'Comment' : (context) => Comment(),
         'messanger' : (context) => Messanger(),
         'transaction' : (context) => Transaction(),
+        'Earn' : (context) => Earn(),
+        'Challeng2' : (context) => Challenge2(),
+        'language' : (context) => Language(),
+        'setting' : (context) => Setting(),
+        'ref' : (contetx) => Reffral(),
+        'tagS' : (context) => Tags(),
+        'AudioS' : (context) => Audio1(),
+        'Edit' : (context) => Editp(),
       },
     );
   }

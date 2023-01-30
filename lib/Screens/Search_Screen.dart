@@ -18,16 +18,24 @@ class _SearchState extends State<Search> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: [
-          IconButton(onPressed: (){
-            Navigator.pushNamed(context, 'Result');
-          }, icon: Icon(Icons.search))
-        ],
         title: Container(
           alignment: Alignment.center,
+          margin: EdgeInsets.only(right: 4),
           height: 50,
           child: TextField(
             decoration: InputDecoration(
+              hintText: 'Search User,HashTags',
+              hintStyle: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+              ),
+              prefixIcon: Container(
+                alignment: AlignmentDirectional.centerEnd,
+                child: IconButton(onPressed: () {
+                  Navigator.pushNamed(context, 'Result');
+                }, icon: Icon(Icons.search,),
+                ),
+              ),
               border: OutlineInputBorder(
                 gapPadding: 4,
                 borderRadius: BorderRadius.circular(10)
@@ -46,27 +54,27 @@ class _SearchState extends State<Search> {
                   children: [
                     //Add whatever widget you want to show.
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: EdgeInsets.only(right: 10),
                       color: Colors.white,
-                      width: wid*0.8,
+                      width: wid,
                       height: hig*0.2,
                     ),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: EdgeInsets.only(right: 10),
                       color: Colors.white,
-                      width: wid*0.8,
+                      width: wid,
                       height: hig*0.2,
                     ),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: EdgeInsets.only(right: 10),
                       color: Colors.white,
-                      width: wid*0.8,
+                      width: wid,
                       height: hig*0.2,
                     ),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: EdgeInsets.only(right: 10),
                       color: Colors.white,
-                      width: wid*0.8,
+                      width: wid,
                       height: hig*0.2,
                     )
                   ],
@@ -75,12 +83,23 @@ class _SearchState extends State<Search> {
             ),
             SizedBox(height: 10,),
             Container(
-              padding: EdgeInsets.all(5),
+              padding: EdgeInsets.only(right: 10),
               alignment: Alignment.centerLeft,
               width: wid,
               height: 25,
               color: Color.fromRGBO(60, 52, 94, 1),
-              child: Text('#CHALLENGE',style: TextStyle(fontWeight: FontWeight.bold),),
+              child: Row(
+                children: [
+                  Text('#',style: TextStyle(
+                      color: Color.fromRGBO(255, 176, 0, 1),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24),),
+                  SizedBox(width: 20,),
+                  Text('CHALLENGE VIDEO',style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),)
+                ],
+              )
             ),
             SizedBox(height: 10,),
             SingleChildScrollView(
@@ -150,7 +169,7 @@ class _SearchState extends State<Search> {
                         height: 70,
                         width: 70,
                         decoration: BoxDecoration(
-                          color: Colors.yellow,
+                          color: Color.fromRGBO(255, 176, 0, 1),
                           shape: BoxShape.circle,
                         ),
                         child: Text('More'),
@@ -167,7 +186,18 @@ class _SearchState extends State<Search> {
               width: wid,
               height: 25,
               color: Color.fromRGBO(60, 52, 94, 1),
-              child: Text('#CHALLENGE',style: TextStyle(fontWeight: FontWeight.bold),),
+              child: Row(
+                children: [
+                  Text('#',style: TextStyle(
+                      color: Color.fromRGBO(255, 176, 0, 1),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24),),
+                  SizedBox(width: 20,),
+                  Text('CHALLENGE VIDEO',style: TextStyle(
+                      fontWeight: FontWeight.bold
+                  ),)
+                ],
+              )
             ),
             SizedBox(height: 10,),
             SingleChildScrollView(
@@ -235,7 +265,7 @@ class _SearchState extends State<Search> {
                         height: 70,
                         width: 70,
                         decoration: BoxDecoration(
-                          color: Colors.yellow,
+                          color: Color.fromRGBO(255, 176, 0, 1),
                           shape: BoxShape.circle,
                         ),
                         child: Text('More'),
@@ -244,7 +274,27 @@ class _SearchState extends State<Search> {
                   ),
                 ],
               ),
-            )
+            ),
+            Container(
+                padding: EdgeInsets.all(5),
+                alignment: Alignment.centerLeft,
+                width: wid,
+                height: 25,
+                color: Color.fromRGBO(60, 52, 94, 1),
+                child: Row(
+                  children: [
+                    Text('#',style: TextStyle(
+                        color: Color.fromRGBO(255, 176, 0, 1),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24),),
+                    SizedBox(width: 20,),
+                    Text('CHALLENGE VIDEO',style: TextStyle(
+                        fontWeight: FontWeight.bold
+                    ),)
+                  ],
+                ),
+            ),
+            SizedBox(height: 30,)
           ],
         ),
       ),

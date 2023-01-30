@@ -1,12 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:freelance/Constants/app_icons.dart';
-import 'package:freelance/Screens/Home.dart';
-import 'package:freelance/Screens/bottom_Nav_Bar_Screens/Reel_Making_Screen.dart';
 
 class Reel1 extends StatefulWidget {
-  const Reel1({Key? key}) : super(key: key);
-
   @override
   State<Reel1> createState() => _Reel1State();
 }
@@ -22,30 +18,38 @@ class _Reel1State extends State<Reel1> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushNamed(context, 'search');
-          },
-          icon: Icon(Icons.search),
+        leading: Container(
+          margin: EdgeInsets.only(left: 25),
+          child: IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, 'search');
+            },
+            icon: Icon(Icons.search),
+          ),
         ),
-        title: Text('Following | Trending'),
+        title: Text('Following | Trending',style: TextStyle(
+          fontFamily: 'kefa',
+        ),),
         centerTitle: true,
         actions: <Widget>[
           // Using Stack to show Notification Badge
           Stack(
             children: <Widget>[
-              IconButton(
-                  icon: Icon(Icons.notifications),
-                  onPressed: () {
-                    Navigator.pushNamed(context, 'notification');
-                    setState(() {
-                      counter = 0;
-                    });
-                  }),
+              Container(
+                margin: EdgeInsets.only(right: 20, top: 5),
+                child: IconButton(
+                    icon: Icon(Icons.notifications),
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'notification');
+                      setState(() {
+                        counter = 0;
+                      });
+                    }),
+              ),
               counter != 0
                   ? Positioned(
-                      right: 11,
-                      top: 11,
+                      right: 31,
+                      top: 16,
                       child: Container(
                         padding: const EdgeInsets.all(2),
                         decoration: BoxDecoration(
@@ -71,93 +75,207 @@ class _Reel1State extends State<Reel1> {
           ),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Align(
-            alignment: AlignmentDirectional.bottomEnd,
-            child: InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, 'profile');
-              },
-              child: CircleAvatar(
-                radius: 18,
-                backgroundColor: Colors.white,
+      body: Stack(children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Align(
+              alignment: Alignment.bottomRight,
+              child: InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, 'profile');
+                },
+                child: Container(
+                  margin: EdgeInsets.only(right: 8),
+                  child: CircleAvatar(
+                    radius: 18,
+                    backgroundColor: Colors.white,
+                  ),
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          Align(
-              alignment: AlignmentDirectional.bottomEnd,
-              child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.favorite,
-                    color: Colors.red,
-                    size: 30,
-                  ))),
-          Align(
-              alignment: AlignmentDirectional.bottomEnd,
-              child: IconButton(
-                  onPressed: () {
-                    showModalBottomSheet(
-                        context: context,
-                        builder: (BuildContext context) => openBottomDrawer2());
-                  },
-                  icon: Icon(
-                    Icons.messenger,
-                    size: 30,
-                  ))),
-          const Align(
-            alignment: AlignmentDirectional.bottomEnd,
-            child: CircleAvatar(
-              radius: 18,
-              backgroundColor: Colors.white,
+            SizedBox(
+              height: 10,
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Align(
-              alignment: AlignmentDirectional.bottomEnd,
-              child: IconButton(
-                  onPressed: () {
-                    showModalBottomSheet(
+            Align(
+                alignment: AlignmentDirectional.bottomEnd,
+                child: Container(
+                  margin: EdgeInsets.only(right: 3),
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.favorite,
+                        color: Colors.red,
+                        size: 34,
+                      )),
+                )),
+            Align(
+                alignment: AlignmentDirectional.bottomEnd,
+                child: IconButton(
+                    onPressed: () {
+                      showModalBottomSheet(
                         context: context,
-                        builder: (BuildContext context) => openBottomDrawer3());
-                  },
-                  icon: Icon(
-                    MyFlutterApp.paper_plane,
-                    size: 30,
-                  ))),
-        ],
-      ),
+                        builder: (BuildContext context) => openBottomDrawer2(),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                          ),
+                        ),
+                      );
+                    },
+                    icon: Image(
+                      image: AssetImage('Images/Message_icon_2.png'),
+                      height: 32,
+                      width: 32,
+                    ))),
+            SizedBox(
+              height: 10,
+            ),
+            Align(
+              alignment: AlignmentDirectional.bottomEnd,
+              child: Container(
+                margin: EdgeInsets.only(right: 8),
+                child: Image(
+                  image: AssetImage('Images/profile_2.icon.png'),
+                  height: 32,
+                  width: 32,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Align(
+                alignment: AlignmentDirectional.bottomEnd,
+                child: IconButton(
+                    onPressed: () {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) =>
+                              openBottomDrawer3());
+                    },
+                    icon: Image(
+                      image: AssetImage('Images/Plane_Icon.png'),
+                      height: 32,
+                      width: 32,
+                    ))),
+          ],
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(bottom: 4, left: 10),
+              child: Text(
+                '1.2M View',
+                style: TextStyle(
+                  fontSize: 11,
+                ),
+              ),
+            ),
+            Row(children: [
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, 'profile');
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: CircleAvatar(
+                    radius: 14,
+                    backgroundColor: Colors.white,
+                  ),
+                ),
+              ),
+              Container(
+                  margin: EdgeInsets.only(left: 4),
+                  child: Text(
+                    'Name',
+                    style: TextStyle(fontSize: 12),
+                  )),
+              Container(
+                margin: EdgeInsets.only(left: 5),
+                padding:
+                    EdgeInsets.only(left: 10, right: 10, top: 4, bottom: 4),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Color.fromRGBO(255, 176, 0, 1),
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  'Follow',
+                  style: TextStyle(fontSize: 9),
+                ),
+              ),
+            ]),
+            Container(
+              margin: EdgeInsets.only(top: 4, left: 10),
+              child: Text(
+                '#Dance...more',
+                style: TextStyle(fontSize: 9),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 9, bottom: 10),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.music_note,
+                    size: 14,
+                  ),
+                  Text(
+                    'Music Name',
+                    style: TextStyle(
+                      fontSize: 9,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ]),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.transparent,
+        color: Color.fromRGBO(73, 60, 111, 1),
         elevation: 0,
         child: Expanded(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.home)),
-              IconButton(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                IconButton(
+                    onPressed: () {},
+                    icon: Image(
+                      image: AssetImage('Images/home_icon.png'),
+                    )),
+                SizedBox(
+                  width: 20,
+                ),
+                IconButton(
                   onPressed: () {
                     Navigator.pushNamed(context, 'Reel1');
                   },
-                  icon: Icon(Icons.video_camera_back_sharp)),
-              IconButton(
-                  onPressed: () {
-                    showModalBottomSheet(
-                        context: context,
-                        builder: (BuildContext context) => openBottomDrawer1());
-                  },
-                  icon: Icon(Icons.menu)),
-            ],
-          ),
+                  icon: Image(
+                    image: AssetImage('Images/Reel_Icon.png'),
+                  ),
+                ),
+              ],
+            ),
+            IconButton(
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) => openBottomDrawer1());
+              },
+              icon: Image(
+                image: AssetImage('Images/menu_Icon.png'),
+              ),
+            ),
+          ]),
         ),
       ),
     );
@@ -172,15 +290,11 @@ class _Reel1State extends State<Reel1> {
         child: ListView(
           children: [
             InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.pushNamed(context, 'profile2');
               },
               child: Container(
-                margin: EdgeInsets.only(top: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.yellow),
-                ),
+                margin: EdgeInsets.only(top: 10, bottom: 5),
                 child: Row(
                   children: [
                     Stack(children: [
@@ -195,7 +309,7 @@ class _Reel1State extends State<Reel1> {
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Colors.yellow,
+                            color: Color.fromRGBO(255, 176, 0, 1),
                           ),
                           child: Icon(Icons.add),
                         ),
@@ -209,73 +323,103 @@ class _Reel1State extends State<Reel1> {
                 ),
               ),
             ),
+            Divider(
+              color: Color.fromRGBO(255, 176, 0, 1),
+              height: 1,
+            ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.pushNamed(context, 'messanger');
               },
               child: Container(
                 margin: EdgeInsets.only(top: 5),
                 padding: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.yellow),
-                ),
                 child: Text('Message Box'),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5),
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.yellow),
-              ),
-              child: Text('Account Transaction'),
+            Divider(
+              color: Color.fromRGBO(255, 176, 0, 1),
+              height: 1,
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5),
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.yellow),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'transaction');
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.all(5),
+                child: Text('Account Transaction'),
               ),
-              child: Text('How to earn money or get official mark'),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5),
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.yellow),
-              ),
-              child: Text('Challenge'),
+            Divider(
+              color: Color.fromRGBO(255, 176, 0, 1),
+              height: 1,
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5),
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.yellow),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'Earn');
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.all(5),
+                child: Text('How to earn money or get official mark'),
               ),
-              child: Text('Language'),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5),
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.yellow),
-              ),
-              child: Text('Setting'),
+            Divider(
+              color: Color.fromRGBO(255, 176, 0, 1),
+              height: 1,
             ),
-            Container(
-              margin: EdgeInsets.only(top: 5),
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.yellow),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'Challeng2');
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.all(5),
+                child: Text('Challenge'),
               ),
-              child: Text('refferal code'),
+            ),
+            Divider(
+              color: Color.fromRGBO(255, 176, 0, 1),
+              height: 1,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'language');
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.all(5),
+                child: Text('Language'),
+              ),
+            ),
+            Divider(
+              color: Color.fromRGBO(255, 176, 0, 1),
+              height: 1,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'setting');
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.all(5),
+                child: Text('Setting'),
+              ),
+            ),
+            Divider(
+              color: Color.fromRGBO(255, 176, 0, 1),
+              height: 1,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'ref');
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.all(5),
+                child: Text('refferal code'),
+              ),
             ),
           ],
         ),
@@ -296,10 +440,13 @@ class _Reel1State extends State<Reel1> {
         child: ListView(
           children: [
             Container(
-              padding: EdgeInsets.all(7),
+              padding: EdgeInsets.all(10),
               alignment: Alignment.center,
               color: Color.fromRGBO(60, 52, 94, 1),
-              child: Text('COMMENTS'),
+              child: Text(
+                'COMMENTS',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
             ),
             SizedBox(
               height: 15,
@@ -333,7 +480,12 @@ class _Reel1State extends State<Reel1> {
                 Container(
                     margin: EdgeInsets.only(bottom: 7),
                     child: IconButton(
-                        onPressed: () {}, icon: Icon(Icons.delete_rounded)))
+                        onPressed: () {},
+                        icon: Image(
+                          image: AssetImage('Images/Delete_icon.png'),
+                          height: 26,
+                          width: 26,
+                        )))
               ],
             ),
             Row(
@@ -363,31 +515,41 @@ class _Reel1State extends State<Reel1> {
                       ]),
                 ),
                 Container(
-                    margin: EdgeInsets.only(bottom: 7),
-                    child: IconButton(
-                        onPressed: () {}, icon: Icon(Icons.delete_rounded)))
-              ],
-            ),
-            Row(children: [
-              Container(
-                color: Color.fromRGBO(60, 52, 94, 1),
-                alignment: Alignment.center,
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        gapPadding: 4, borderRadius: BorderRadius.circular(10)),
+                  margin: EdgeInsets.only(bottom: 7),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Image(
+                      image: AssetImage('Images/Delete_icon.png'),
+                      height: 26,
+                      width: 26,
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.yellow,
+              ],
+            ),
+            Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.all(7),
+                  width: MediaQuery.of(context).size.width / 1.4,
+                  margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(60, 52, 94, 1),
+                    borderRadius: BorderRadius.circular(7),
+                  ),
+                  child: Text('Fake'),
                 ),
-                child: Text('Delete'),
-              ),
-            ]),
+                Container(
+                  margin: EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.all(7),
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(255, 176, 0, 1),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Text('Delete'),
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -408,7 +570,7 @@ class _Reel1State extends State<Reel1> {
             children: [
               Container(
                 alignment: Alignment.center,
-                color: Color.fromRGBO(60, 52, 94, 1),
+                color: Color.fromRGBO(38, 34, 61, 1),
                 padding: EdgeInsets.all(7),
                 child: Text(
                   'Share To',
@@ -422,7 +584,7 @@ class _Reel1State extends State<Reel1> {
                     Container(
                       margin: EdgeInsets.only(left: 10, top: 7),
                       child: CircleAvatar(
-                        backgroundColor: Color.fromRGBO(60, 52, 94, 1),
+                        backgroundColor: Color.fromRGBO(38, 34, 61, 1),
                         radius: 16,
                         child: Image.asset('Images/instagram.png'),
                       ),
@@ -455,7 +617,7 @@ class _Reel1State extends State<Reel1> {
                     Container(
                       margin: EdgeInsets.only(left: 10, top: 7),
                       child: CircleAvatar(
-                        backgroundColor: Color.fromRGBO(60, 52, 94, 1),
+                        backgroundColor: Color.fromRGBO(38, 34, 61, 1),
                         radius: 16,
                         child: Image.asset('Images/whatsapp.png'),
                       ),
@@ -508,36 +670,38 @@ class _Reel1State extends State<Reel1> {
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: 10),
-                    alignment: Alignment.center,
-                    width: MediaQuery.of(context).size.width-20,
-                    padding: EdgeInsets.all(7),
+                    width: MediaQuery.of(context).size.width - 20,
+                    padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(60, 52, 94, 1),
+                      color: Color.fromRGBO(38, 34, 61, 1),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text('Add to faviourite'),
+                    child: Text(
+                      'Add to faviourite',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 10),
-                    alignment: Alignment.center,
-                    width: MediaQuery.of(context).size.width-20,
-                    padding: EdgeInsets.all(7),
+                    width: MediaQuery.of(context).size.width - 20,
+                    padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(60, 52, 94, 1),
+                      color: Color.fromRGBO(38, 34, 61, 1),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text('Download'),
+                    child: Text('Download',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 10),
-                    alignment: Alignment.center,
-                    width: MediaQuery.of(context).size.width-20,
-                    padding: EdgeInsets.all(7),
+                    width: MediaQuery.of(context).size.width - 20,
+                    padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(60, 52, 94, 1),
+                      color: Color.fromRGBO(38, 34, 61, 1),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text('Not Interested'),
+                    child: Text('Not Interested',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ],
               ),
@@ -546,3 +710,13 @@ class _Reel1State extends State<Reel1> {
         ));
   }
 }
+
+// IconButton(
+// onPressed: () {
+// showModalBottomSheet(
+// context: context,
+// builder: (BuildContext context) => openBottomDrawer1());
+// },
+// icon: Image(
+// image: AssetImage('Images/menu_Icon.png'),
+// )),

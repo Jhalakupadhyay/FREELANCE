@@ -79,3 +79,9 @@ flutter:
     - family: MyFlutterApp
       fonts:
         - asset: Icons/MyFlutterApp.ttf
+    - family: kefa
+      fonts:
+        - asset: fonts/Kefa-Regular.TTF
+    - family: PT Serif Caption
+      fonts:
+        - asset: fonts/PTSerifCaption.ttf

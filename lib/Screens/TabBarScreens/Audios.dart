@@ -11,49 +11,59 @@ import 'package:flutter/material.dart';
    Widget build(BuildContext context) {
      return Column(
        children: [
-         Row(
-           children: [
-             Container(
-               margin: EdgeInsets.all(10),
-               height: 40,
-               width: 40,
-               color: Colors.white,
-             ),
-             Column(
-               children: [
+         InkWell(
+           onTap: (){
+             Navigator.pushNamed(context, 'AudioS');
+           },
+           child: Row(
+             children: [
+               Container(
+                 margin: EdgeInsets.all(10),
+                 height: 40,
+                 width: 40,
+                 color: Colors.white,
+               ),
+               Column(
+                 children: [
 
-                 Container(
-                   margin: EdgeInsets.only(bottom: 5),
-                   child: Text('Song Name',style: TextStyle(fontSize: 12),),
-                 ),
-                 Container(
-                   child: Text('Singer descriptions',style: TextStyle(fontSize: 12),),
-                 )
-               ],
-             )
-           ],
+                   Container(
+                     margin: EdgeInsets.only(bottom: 5),
+                     child: Text('Song Name',style: TextStyle(fontSize: 12),),
+                   ),
+                   Container(
+                     child: Text('Singer descriptions',style: TextStyle(fontSize: 12),),
+                   )
+                 ],
+               )
+             ],
+           ),
          ),
-         Row(
-           children: [
-             Container(
-               margin: EdgeInsets.all(10),
-               height: 40,
-               width: 40,
-               color: Colors.white,
-             ),
-             Column(
-               children: [
+         InkWell(
+           onTap: (){
+             Navigator.pushNamed(context, 'AudioS');
+           },
+           child: Row(
+             children: [
+               Container(
+                 margin: EdgeInsets.all(10),
+                 height: 40,
+                 width: 40,
+                 color: Colors.white,
+               ),
+               Column(
+                 children: [
 
-                 Container(
-                   margin: EdgeInsets.only(bottom: 5),
-                   child: Text('Song Name',style: TextStyle(fontSize: 12),),
-                 ),
-                 Container(
-                   child: Text('Singer descriptions',style: TextStyle(fontSize: 12),),
-                 )
-               ],
-             )
-           ],
+                   Container(
+                     margin: EdgeInsets.only(bottom: 5),
+                     child: Text('Song Name',style: TextStyle(fontSize: 12),),
+                   ),
+                   Container(
+                     child: Text('Singer descriptions',style: TextStyle(fontSize: 12),),
+                   )
+                 ],
+               )
+             ],
+           ),
          ),
          Row(
            children: [

@@ -26,8 +26,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
   String text1 = 'Follow';
   String text2 = 'Following';
   String text = 'Follow';
-  Color c = Colors.yellow;
-  Color c1 = Colors.yellow;
+  Color c = Color.fromRGBO(255, 176, 0, 1);
+  Color c1 = Color.fromRGBO(255, 176, 0, 1);
   Color c2 = Color.fromRGBO(79, 69, 124, 1);
   bool b = false;
   @override
@@ -39,70 +39,86 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
         centerTitle: true,
         backgroundColor: Color.fromRGBO(60, 52, 94, 1),
         elevation: 0,
-        actions: [IconButton(icon: Icon(Icons.linear_scale_outlined,), onPressed: () {
+        actions: [IconButton(icon: Image(image: AssetImage('Images/option_icon..png'),), onPressed: () {
           showDialog(context: context, builder: (BuildContext context){
             return
                 AlertDialog(
-                  backgroundColor: Colors.white,
+                  insetPadding: EdgeInsets.only(top: 400),
+                  backgroundColor: Colors.transparent,
+                  elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                content: Builder(builder: (context){
-                  return Container(
-                    height: MediaQuery.of(context).size.height/3,
-                    width: MediaQuery.of(context).size.width/3,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(60, 52, 94, 1),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: EdgeInsets.only(left: 2,right: 2,top: 2),
-                          child: TextButton(onPressed: () {  }, child: Text('Block',style: TextStyle(color: Colors.white),),),
-                          alignment: Alignment.center,
+                content: Container(
+                  height: MediaQuery.of(context).size.height/4,
+                  width: MediaQuery.of(context).size.width/2,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7),
+                          color: Color.fromRGBO(60, 52, 94, 1),
+                          border: Border.all(color: Colors.white)
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(60, 52, 94, 1),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: EdgeInsets.only(left: 2,right: 2,top: 2),
-                          child: TextButton(onPressed: () {  }, child: Text('Report',style: TextStyle(color: Colors.white),),),
-                          alignment: Alignment.center,
+                        child:
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(top: 1),
+                              child: Text('Block'),
+                            ),
+                            Divider(
+                              color: Color.fromRGBO(255, 176, 0, 1),
+                              thickness: 1,
+                            ), Container(
+                              child: Text('Report'),
+                            ),
+                            Divider(
+                              color: Color.fromRGBO(255, 176, 0, 1),
+                              thickness: 1,
+                            ),
+                            Container(
+                              child: Text('Restrict'),
+                            ),
+                            Divider(
+                              color: Color.fromRGBO(255, 176, 0, 1),
+                              thickness: 1,
+                            ),
+                            Container(
+                              child: Text('Hide your Story'),
+                            ),
+                            Divider(
+                              color: Color.fromRGBO(255, 176, 0, 1),
+                              thickness: 1,
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(bottom: 2),
+                              child: Text('Share This Profile'),
+                            ),
+                          ],
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(60, 52, 94, 1),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: EdgeInsets.only(left: 2,right: 2,top: 2),
-                          child: TextButton(onPressed: () {  }, child: Text('Restrict',style: TextStyle(color: Colors.white),),),
-                          alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(60, 52, 94, 1),
+                          borderRadius: BorderRadius.circular(7),
+                          border: Border.all(color: Colors.white)
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(60, 52, 94, 1),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: EdgeInsets.only(left: 2,right: 2,top: 2),
-                          child: TextButton(onPressed: () {  }, child: Text('Hide your story',style: TextStyle(color: Colors.white),),),
-                          alignment: Alignment.center,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(60, 52, 94, 1),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: EdgeInsets.only(left: 2,right: 2,top: 2),
-                          child: TextButton(onPressed: () {  }, child: Text('Share this profile',style: TextStyle(color: Colors.white),),),
-                          alignment: Alignment.center,
-                        ),
-                      ],
-                    ),
-                  );
-                })
+                        child: Text('Cancel'),
+                      ),
+                    ],
+                  ),
+                ),
             );
           });
         },)],
@@ -139,7 +155,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                           child: Container(
                             child: Icon(
                               Icons.verified,
-                              color: Colors.yellow,
+                              color: Color.fromRGBO(255, 176, 0, 1),
                               size: 35,
                             ),
                           )),
@@ -161,7 +177,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                       thickness: 3,
                       endIndent: 30,
                       width: 30,
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     Column(
                       children: [
@@ -177,7 +193,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                       thickness: 3,
                       endIndent: 30,
                       width: 30,
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     Column(
                       children: [
@@ -235,7 +251,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                           color: c,
                           borderRadius: BorderRadius.circular(6),
                         ),
-                        child: Text(text),
+                        child: Text(text,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                       ),
                     ),
                     InkWell(
@@ -243,7 +259,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                         Navigator.pushNamed(context, 'message');
                       },
                       child: Container(
-                        margin: EdgeInsets.only(left: 10, right: 20, top: 20),
+                        padding: EdgeInsets.all(2),
+                        margin: EdgeInsets.only(left: 22, right: 20, top: 20),
                         alignment: Alignment.center,
                         width: 65,
                         height: 20,
@@ -253,7 +270,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                         ),
                         child: Text(
                           'Message',
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -262,11 +279,19 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
           ),
         ]),
         SizedBox(height: 10,),
-        TabBar(controller: _tabController,
+        TabBar(
+          indicatorColor: Color.fromRGBO(255, 176, 0, 1),
+            controller: _tabController,
             tabs: [
           Icon(MyFlutterApp.th_large,size: 30,),
-          Icon(Icons.play_circle,size: 30,),
-          Icon(Icons.messenger,size: 30,),
+              Image(image: AssetImage('Images/Play_button.png'),
+                height: 29,
+                width: 29,
+              ),
+          Image(image: AssetImage('Images/Message_icon.png'),
+            height: 30,
+            width: 30,
+          ),
         ]),
         Expanded(child: TabBarView(
           controller: _tabController,

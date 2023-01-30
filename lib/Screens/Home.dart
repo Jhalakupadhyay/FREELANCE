@@ -28,7 +28,8 @@ class Home extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text('LIBLAB',style: TextStyle(
-                      fontSize: 25.0
+                      fontFamily: 'kefa',
+                      fontSize: 25.0,
                     ),),
                     Container(
                       padding: EdgeInsets.all(10),

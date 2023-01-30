@@ -42,7 +42,7 @@ class _LikesState extends State<Likes> {
               padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.yellow,
+                color: Color.fromRGBO(255, 176, 0, 1),
               ),
               child: Text(
                 'Following',
@@ -71,7 +71,7 @@ class _LikesState extends State<Likes> {
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     child: Text(
                       'Following',
@@ -100,7 +100,7 @@ class _LikesState extends State<Likes> {
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     child: Text(
                       'Following',
@@ -129,7 +129,7 @@ class _LikesState extends State<Likes> {
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     child: Text(
                       'Following',
@@ -158,7 +158,7 @@ class _LikesState extends State<Likes> {
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     child: Text(
                       'Following',
@@ -187,7 +187,7 @@ class _LikesState extends State<Likes> {
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 176, 0, 1),
                     ),
                     child: Text(
                       'Following',

@@ -13,9 +13,9 @@ class _TagsState extends State<Tags> {
     String t1 = 'Follow';
     String t2 = 'Following';
     String t = 'Follow';
-    Color c1 = Color.fromRGBO(255, 176, 0, 1);
+    Color c1 = Color.fromRGBO(255, 175, 0, 1);
     Color c2 = Color.fromRGBO(60, 52, 94, 1);
-    Color c = Color.fromRGBO(255, 176, 0, 1);
+    Color c = Color.fromRGBO(255, 175, 0, 1);
     bool b = false;
     return Scaffold(
       backgroundColor: Color.fromRGBO(81, 70, 127, 1),

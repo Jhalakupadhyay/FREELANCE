@@ -53,7 +53,7 @@ class _EditpState extends State<Editp> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                      color: Color.fromRGBO(255, 176, 0, 1), width: 2),
+                      color: Color.fromRGBO(255, 175, 0, 1), width: 2),
                 ),
                 child: CircleAvatar(
                   radius: 70,
@@ -68,7 +68,7 @@ class _EditpState extends State<Editp> {
             child: Container(
               padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(255, 176, 0, 1),
+                color: Color.fromRGBO(255, 175, 0, 1),
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: Color.fromRGBO(56, 56, 94, 1),

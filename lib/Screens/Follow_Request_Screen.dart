@@ -14,8 +14,8 @@ class _followRequestState extends State<followRequest> {
     String t2 = 'Follow';
     String t = 'Follow';
     Color c1 = Color.fromRGBO(38, 34, 61, 1);
-    Color c2 = Color.fromRGBO(255, 176, 0, 1);
-    Color c = Color.fromRGBO(255, 176, 0, 1);
+    Color c2 = Color.fromRGBO(255, 175, 0, 1);
+    Color c = Color.fromRGBO(255, 175, 0, 1);
     bool b = false;
     return Scaffold(
       backgroundColor: Color.fromRGBO(81, 70, 127, 1),
@@ -117,7 +117,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Confirm',
@@ -174,7 +174,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Confirm',
@@ -231,7 +231,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Confirm',
@@ -288,7 +288,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Confirm',
@@ -345,7 +345,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Confirm',
@@ -410,7 +410,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Follow',
@@ -454,7 +454,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Follow',
@@ -498,7 +498,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Follow',
@@ -542,7 +542,7 @@ class _followRequestState extends State<followRequest> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Follow',

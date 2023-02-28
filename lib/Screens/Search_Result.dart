@@ -47,7 +47,7 @@ class _ResultState extends State<Result> with SingleTickerProviderStateMixin{
                 prefixIcon: Container(
                   alignment: AlignmentDirectional.centerEnd,
                   child: IconButton(onPressed: () {
-                  }, icon: Icon(Icons.search,color: Color.fromRGBO(255, 176, 0, 1),),
+                  }, icon: Icon(Icons.search,color: Color.fromRGBO(255, 175, 0, 1),),
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
@@ -55,23 +55,23 @@ class _ResultState extends State<Result> with SingleTickerProviderStateMixin{
                     borderRadius: BorderRadius.circular(10)
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color.fromRGBO(255, 176, 0, 1),)
+                  borderSide: BorderSide(color: Color.fromRGBO(255, 175, 0, 1),)
                 ),
               ),
             ),
           ),
           bottom: TabBar(
             controller: _tabController,
-            indicatorColor: Color.fromRGBO(255, 176, 0, 1),
+            indicatorColor: Color.fromRGBO(255, 175, 0, 1),
             indicatorWeight: 3,
             indicatorPadding: EdgeInsets.only(top: 5),
             unselectedLabelColor: Colors.white,
             tabs: const [
-              Text('Trending',style: TextStyle(fontSize: 11),),
-              Text('User',style: TextStyle(fontSize: 11)),
-              Text('Video',style: TextStyle(fontSize: 11)),
-              Text('Tag',style: TextStyle(fontSize: 11)),
-              Text('Audio',style: TextStyle(fontSize: 11)),
+              Text('Trending',style: TextStyle(fontSize: 10),),
+              Text('User',style: TextStyle(fontSize: 10)),
+              Text('Video',style: TextStyle(fontSize: 10)),
+              Text('Tag',style: TextStyle(fontSize: 10)),
+              Text('Audio',style: TextStyle(fontSize: 10)),
             ],
             labelColor: Colors.white,
           ),

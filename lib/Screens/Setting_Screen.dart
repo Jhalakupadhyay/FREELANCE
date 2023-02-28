@@ -25,7 +25,7 @@ class _SettingState extends State<Setting> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
           border: Border.all(
-            color: Color.fromRGBO(255, 176, 0, 1),
+            color: Color.fromRGBO(255, 175, 0, 1),
           ),
         ),
         child: Column(
@@ -47,7 +47,7 @@ class _SettingState extends State<Setting> {
                       ),
                       Switch.adaptive(
                         inactiveTrackColor: Colors.white,
-                        activeColor: Color.fromRGBO(255, 176, 0, 1),
+                        activeColor: Color.fromRGBO(255, 175, 0, 1),
                         value: _lights,
                         onChanged: (bool value) {
                           setState(() {
@@ -75,7 +75,7 @@ class _SettingState extends State<Setting> {
                       ),
                       Switch.adaptive(
                         inactiveTrackColor: Colors.white,
-                        activeColor: Color.fromRGBO(255, 176, 0, 1),
+                        activeColor: Color.fromRGBO(255, 175, 0, 1),
                         value: _lights,
                         onChanged: (bool value) {
                           setState(() {

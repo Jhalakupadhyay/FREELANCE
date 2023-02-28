@@ -200,7 +200,7 @@ class _Reel1State extends State<Reel1> {
                     EdgeInsets.only(left: 10, right: 10, top: 4, bottom: 4),
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Color.fromRGBO(255, 176, 0, 1),
+                    color: Color.fromRGBO(255, 175, 0, 1),
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -309,7 +309,7 @@ class _Reel1State extends State<Reel1> {
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Color.fromRGBO(255, 176, 0, 1),
+                            color: Color.fromRGBO(255, 175, 0, 1),
                           ),
                           child: Icon(Icons.add),
                         ),
@@ -324,7 +324,7 @@ class _Reel1State extends State<Reel1> {
               ),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               height: 1,
             ),
             InkWell(
@@ -338,7 +338,7 @@ class _Reel1State extends State<Reel1> {
               ),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               height: 1,
             ),
             InkWell(
@@ -352,7 +352,7 @@ class _Reel1State extends State<Reel1> {
               ),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               height: 1,
             ),
             InkWell(
@@ -366,7 +366,7 @@ class _Reel1State extends State<Reel1> {
               ),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               height: 1,
             ),
             InkWell(
@@ -380,7 +380,7 @@ class _Reel1State extends State<Reel1> {
               ),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               height: 1,
             ),
             InkWell(
@@ -394,7 +394,7 @@ class _Reel1State extends State<Reel1> {
               ),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               height: 1,
             ),
             InkWell(
@@ -408,7 +408,7 @@ class _Reel1State extends State<Reel1> {
               ),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               height: 1,
             ),
             InkWell(

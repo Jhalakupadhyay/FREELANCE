@@ -83,7 +83,6 @@ class _SearchState extends State<Search> {
             ),
             SizedBox(height: 10,),
             Container(
-              padding: EdgeInsets.only(right: 10),
               alignment: Alignment.centerLeft,
               width: wid,
               height: 25,
@@ -91,7 +90,7 @@ class _SearchState extends State<Search> {
               child: Row(
                 children: [
                   Text('#',style: TextStyle(
-                      color: Color.fromRGBO(255, 176, 0, 1),
+                      color: Color.fromRGBO(255, 175, 0, 1),
                       fontWeight: FontWeight.bold,
                       fontSize: 24),),
                   SizedBox(width: 20,),
@@ -169,7 +168,7 @@ class _SearchState extends State<Search> {
                         height: 70,
                         width: 70,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                           shape: BoxShape.circle,
                         ),
                         child: Text('More'),
@@ -181,7 +180,6 @@ class _SearchState extends State<Search> {
             ),
             SizedBox(height: 10,),
             Container(
-              padding: EdgeInsets.all(5),
               alignment: Alignment.centerLeft,
               width: wid,
               height: 25,
@@ -189,7 +187,7 @@ class _SearchState extends State<Search> {
               child: Row(
                 children: [
                   Text('#',style: TextStyle(
-                      color: Color.fromRGBO(255, 176, 0, 1),
+                      color: Color.fromRGBO(255, 175, 0, 1),
                       fontWeight: FontWeight.bold,
                       fontSize: 24),),
                   SizedBox(width: 20,),
@@ -265,7 +263,7 @@ class _SearchState extends State<Search> {
                         height: 70,
                         width: 70,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                           shape: BoxShape.circle,
                         ),
                         child: Text('More'),
@@ -276,7 +274,6 @@ class _SearchState extends State<Search> {
               ),
             ),
             Container(
-                padding: EdgeInsets.all(5),
                 alignment: Alignment.centerLeft,
                 width: wid,
                 height: 25,
@@ -284,7 +281,7 @@ class _SearchState extends State<Search> {
                 child: Row(
                   children: [
                     Text('#',style: TextStyle(
-                        color: Color.fromRGBO(255, 176, 0, 1),
+                        color: Color.fromRGBO(255, 175, 0, 1),
                         fontWeight: FontWeight.bold,
                         fontSize: 24),),
                     SizedBox(width: 20,),

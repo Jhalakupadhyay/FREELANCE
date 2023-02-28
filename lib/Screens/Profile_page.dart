@@ -26,8 +26,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
   String text1 = 'Follow';
   String text2 = 'Following';
   String text = 'Follow';
-  Color c = Color.fromRGBO(255, 176, 0, 1);
-  Color c1 = Color.fromRGBO(255, 176, 0, 1);
+  Color c = Color.fromRGBO(255, 175, 0, 1);
+  Color c1 = Color.fromRGBO(255, 175, 0, 1);
   Color c2 = Color.fromRGBO(79, 69, 124, 1);
   bool b = false;
   @override
@@ -60,50 +60,60 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Container(
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(7),
-                          color: Color.fromRGBO(60, 52, 94, 1),
-                          border: Border.all(color: Colors.white)
-                        ),
-                        child:
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.only(top: 1),
-                              child: Text('Block'),
+                      Expanded(
+                        child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(7),
+                            color: Color.fromRGBO(60, 52, 94, 1),
+                            border: Border.all(color: Colors.white)
+                          ),
+                          child:
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    child: Text('Block'),
+                                  ),
+                                ),
+                                Divider(
+                                  color: Color.fromRGBO(255, 175, 0, 1),
+                                ), 
+                                Expanded(
+                                  child: Container(
+                                    child: Text('Report'),
+                                  ),
+                                ),
+                                Divider(
+                                  color: Color.fromRGBO(255, 175, 0, 1),
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    child: Text('Restrict'),
+                                  ),
+                                ),
+                                Divider(
+                                  color: Color.fromRGBO(255, 175, 0, 1),
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    child: Text('Hide your Story'),
+                                  ),
+                                ),
+                                Divider(
+                                  color: Color.fromRGBO(255, 175, 0, 1),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(
+                                    padding: EdgeInsets.only(bottom: 2),
+                                    child: Text('Share This Profile'),
+                                  ),
+                                ),
+                              ],
                             ),
-                            Divider(
-                              color: Color.fromRGBO(255, 176, 0, 1),
-                              thickness: 1,
-                            ), Container(
-                              child: Text('Report'),
-                            ),
-                            Divider(
-                              color: Color.fromRGBO(255, 176, 0, 1),
-                              thickness: 1,
-                            ),
-                            Container(
-                              child: Text('Restrict'),
-                            ),
-                            Divider(
-                              color: Color.fromRGBO(255, 176, 0, 1),
-                              thickness: 1,
-                            ),
-                            Container(
-                              child: Text('Hide your Story'),
-                            ),
-                            Divider(
-                              color: Color.fromRGBO(255, 176, 0, 1),
-                              thickness: 1,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(bottom: 2),
-                              child: Text('Share This Profile'),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
                       Container(
@@ -155,7 +165,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                           child: Container(
                             child: Icon(
                               Icons.verified,
-                              color: Color.fromRGBO(255, 176, 0, 1),
+                              color: Color.fromRGBO(255, 175, 0, 1),
                               size: 35,
                             ),
                           )),
@@ -177,7 +187,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                       thickness: 3,
                       endIndent: 30,
                       width: 30,
-                      color: Color.fromRGBO(255, 176, 0, 1),
+                      color: Color.fromRGBO(255, 175, 0, 1),
                     ),
                     Column(
                       children: [
@@ -193,7 +203,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                       thickness: 3,
                       endIndent: 30,
                       width: 30,
-                      color: Color.fromRGBO(255, 176, 0, 1),
+                      color: Color.fromRGBO(255, 175, 0, 1),
                     ),
                     Column(
                       children: [
@@ -280,7 +290,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
         ]),
         SizedBox(height: 10,),
         TabBar(
-          indicatorColor: Color.fromRGBO(255, 176, 0, 1),
+          indicatorColor: Color.fromRGBO(255, 175, 0, 1),
             controller: _tabController,
             tabs: [
           Icon(MyFlutterApp.th_large,size: 30,),

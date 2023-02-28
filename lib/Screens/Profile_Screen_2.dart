@@ -70,7 +70,7 @@ class _Profile2State extends State<Profile2>
                           child: Container(
                             child: Icon(
                               Icons.verified,
-                              color: Color.fromRGBO(255, 176, 0, 1),
+                              color: Color.fromRGBO(255, 175, 0, 1),
                               size: 35,
                             ),
                           )),
@@ -91,7 +91,7 @@ class _Profile2State extends State<Profile2>
                       indent: 15,
                       endIndent: 15,
                       width: 25,
-                      color: Color.fromRGBO(255, 176, 0, 1),
+                      color: Color.fromRGBO(255, 175, 0, 1),
                     ),
                     Container(
                       alignment: Alignment.center,
@@ -106,7 +106,7 @@ class _Profile2State extends State<Profile2>
                       indent: 15,
                       endIndent: 15,
                       width: 25,
-                      color: Color.fromRGBO(255, 176, 0, 1),
+                      color: Color.fromRGBO(255, 175, 0, 1),
                     ),
                     Container(
                       alignment: Alignment.center,
@@ -121,7 +121,7 @@ class _Profile2State extends State<Profile2>
                       indent: 15,
                       endIndent: 15,
                       width: 25,
-                      color: Color.fromRGBO(255, 176, 0, 1),
+                      color: Color.fromRGBO(255, 175, 0, 1),
                     ),
                     Container(
                       alignment: Alignment.center,
@@ -151,8 +151,8 @@ class _Profile2State extends State<Profile2>
         ]),
         SizedBox(height: 10,),
         TabBar(
-          labelColor: Color.fromRGBO(255, 176, 0, 1),
-          indicatorColor: Color.fromRGBO(255, 176, 0, 1),
+          labelColor: Color.fromRGBO(255, 175, 0, 1),
+          indicatorColor: Color.fromRGBO(255, 175, 0, 1),
             labelPadding: EdgeInsets.all(4),
             controller: _tabController, tabs: [
           Container(
@@ -163,7 +163,7 @@ class _Profile2State extends State<Profile2>
             ),
             child: Icon(
               MyFlutterApp.th_large,
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
             ),
           ),
           Image(image: AssetImage('Images/Play_button.png'),
@@ -180,7 +180,7 @@ class _Profile2State extends State<Profile2>
             ),
             child: Icon(
               MyFlutterApp.bookmark,
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
             ),
           ),
           Container(
@@ -191,7 +191,7 @@ class _Profile2State extends State<Profile2>
             ),
             child: Icon(
               MyFlutterApp.dollar,
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
             ),
           ),
         ]),
@@ -477,7 +477,7 @@ class _Profile2State extends State<Profile2>
               fontWeight: FontWeight.bold),),
         ),
         Divider(
-          color: Colors.yellow,
+          color: Color.fromRGBO(255, 175, 0, 1),
           thickness: 3,
         ),
         Container(
@@ -488,7 +488,7 @@ class _Profile2State extends State<Profile2>
               fontWeight: FontWeight.bold),),
         ),
         Divider(
-          color: Color.fromRGBO(255, 176, 0, 1),
+          color: Color.fromRGBO(255, 175, 0, 1),
           thickness: 3,
         ),
         Container(
@@ -499,7 +499,7 @@ class _Profile2State extends State<Profile2>
               fontWeight: FontWeight.bold),),
         ),
         Divider(
-          color: Color.fromRGBO(255, 176, 0, 1),
+          color: Color.fromRGBO(255, 175, 0, 1),
           thickness: 3,
         ),
       ],

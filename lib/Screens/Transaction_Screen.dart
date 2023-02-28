@@ -25,7 +25,7 @@ class _TransactionState extends State<Transaction> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border:
-                  Border.all(color: Color.fromRGBO(255, 176, 0, 1), width: 2),
+                  Border.all(color: Color.fromRGBO(255, 175, 0, 1), width: 2),
             ),
             child: Column(
               children: [
@@ -70,7 +70,7 @@ class _TransactionState extends State<Transaction> {
                       padding: EdgeInsets.only(left: 25,right: 25,top: 5,bottom: 5),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -81,7 +81,7 @@ class _TransactionState extends State<Transaction> {
                       padding: EdgeInsets.only(left: 25,right: 25,top: 5,bottom: 5),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),

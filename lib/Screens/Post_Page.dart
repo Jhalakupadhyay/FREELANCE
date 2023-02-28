@@ -34,7 +34,7 @@ class _postState extends State<post> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Divider(
-            color: Color.fromRGBO(255, 176, 0, 1),
+            color: Color.fromRGBO(255, 175, 0, 1),
             thickness: 2,
           ),
           Row(
@@ -159,7 +159,7 @@ class _postState extends State<post> {
                   fontWeight: FontWeight.bold),),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               thickness: 3,
             ),
             Container(
@@ -170,7 +170,7 @@ class _postState extends State<post> {
                   fontWeight: FontWeight.bold),),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               thickness: 3,
             ),
             Container(
@@ -181,7 +181,7 @@ class _postState extends State<post> {
                   fontWeight: FontWeight.bold),),
             ),
             Divider(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
               thickness: 3,
             ),
           ],

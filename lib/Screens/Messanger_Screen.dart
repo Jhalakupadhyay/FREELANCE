@@ -162,7 +162,7 @@ class _MessangerState extends State<Messanger> {
                   margin: EdgeInsets.only(top: 10,right: 15),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Color.fromRGBO(255, 176, 0, 1),
+                    color: Color.fromRGBO(255, 175, 0, 1),
                   ),
                   child: Text('Delete'),
                 ),

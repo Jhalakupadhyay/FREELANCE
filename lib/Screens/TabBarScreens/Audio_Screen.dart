@@ -80,10 +80,10 @@ class _Audio1State extends State<Audio1> {
                         onPressed: () {},
                         icon: Icon(
                           Icons.play_arrow,
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         )),
                     Slider(
-                        activeColor: Color.fromRGBO(255, 176, 0, 1),
+                        activeColor: Color.fromRGBO(255, 175, 0, 1),
                         inactiveColor: Colors.white,
                         thumbColor: Colors.white,
                         value: 1,
@@ -216,7 +216,7 @@ class _Audio1State extends State<Audio1> {
                 padding: EdgeInsets.only(left: 50,right: 50,top: 10,bottom: 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color.fromRGBO(255, 176, 0, 1),
+                  color: Color.fromRGBO(255, 175, 0, 1),
                 ),
                 child: Text('Use Audio',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
               ),

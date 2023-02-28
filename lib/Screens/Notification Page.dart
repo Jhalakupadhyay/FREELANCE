@@ -15,7 +15,7 @@ class _notificationState extends State<notification> {
     String t2 = 'Follow';
     String t = t2;
     Color c1 = Color.fromRGBO(38, 34, 61, 1);
-    Color c2 = Color.fromRGBO(255, 176, 0, 1);
+    Color c2 = Color.fromRGBO(255, 175, 0, 1);
     Color c = c2;
     bool b = false;
     return Scaffold(
@@ -74,7 +74,7 @@ class _notificationState extends State<notification> {
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromRGBO(255, 176, 0, 1),
+                          color: Color.fromRGBO(255, 175, 0, 1),
                         ),
                         child: Text(
                           'Confirm',

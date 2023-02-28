@@ -24,7 +24,7 @@ class _Challenge2State extends State<Challenge2> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7),
             border: Border.all(
-              color: Color.fromRGBO(255, 176, 0, 1),
+              color: Color.fromRGBO(255, 175, 0, 1),
             )
           ),
           child: Column(

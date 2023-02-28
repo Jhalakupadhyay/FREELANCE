@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:freelance/Screens/Home.dart';
-import 'package:freelance/Screens/PhoneSignin.dart';
+import 'package:freelance/Screens/SignIn/PhoneSignin.dart';
 import 'package:freelance/Screens/Setting_Screen.dart';
 import 'package:freelance/Screens/TabBarScreens/TAg.dart';
-import 'Screens/Signin.dart';
+import 'Screens/SignIn/Signin.dart';
 import 'Screens/ReelPage.dart';
 import 'Screens/Search_Screen.dart';
 import 'Screens/Challenge_Screen.dart';
@@ -35,10 +35,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(color: Colors.black54),
-        ),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'kefa',
       ),
       initialRoute: 'Home',
       routes: {

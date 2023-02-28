@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Constants/app_icons.dart';
+import '../../Constants/app_icons.dart';
 
 class Phone extends StatefulWidget {
   const Phone({Key? key}) : super(key: key);
@@ -12,21 +12,21 @@ class Phone extends StatefulWidget {
 class _PhoneState extends State<Phone> {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height as double;
+    double width = MediaQuery.of(context).size.width as double;
     return Scaffold(
       backgroundColor: Color.fromRGBO(81, 70, 127, 1),
       body: Container(
         margin: EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: Color.fromRGBO(81, 70, 127, 1),
-          border: Border.all(color:Color.fromRGBO(255, 176, 0, 1),width: 0.5),
+          border: Border.all(color:Color.fromRGBO(255, 175, 0, 1),width: 0.5),
           borderRadius: BorderRadius.circular(7)
         ),
         child: Center(
           child: Container(
+            height: height*,
             alignment: AlignmentDirectional.topStart,
             margin: EdgeInsets.all(20),
-            height: 450,
-            width: 350,
             decoration: BoxDecoration(
               color: Color.fromRGBO(60, 52, 94, 1),
               borderRadius: BorderRadius.circular(8),
@@ -42,7 +42,7 @@ class _PhoneState extends State<Phone> {
                     child: const Text(
                       'Create Account/Login',
                       style: TextStyle(
-                        color: Color.fromRGBO(255, 176, 0, 1),
+                        color: Color.fromRGBO(255, 175, 0, 1),
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
                       ),
@@ -56,7 +56,7 @@ class _PhoneState extends State<Phone> {
                         child: Container(
                           padding: EdgeInsets.only(left: 11,right: 11,top: 14,bottom: 14),
                           decoration: BoxDecoration(
-                            color: Color.fromRGBO(255, 176, 0, 1),
+                            color: Color.fromRGBO(255, 175, 0, 1),
                             borderRadius: BorderRadius.circular(7),
                             border: Border.all(color: Colors.white,width: 1),
                           ),
@@ -92,7 +92,7 @@ class _PhoneState extends State<Phone> {
                               Container(
                                 padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
                                 decoration: BoxDecoration(
-                                  color:Color.fromRGBO(255, 176, 0, 1),
+                                  color:Color.fromRGBO(255, 175, 0, 1),
                                   borderRadius: BorderRadius.circular(4),
                                 ),
                                 child: Text('Edit',style: TextStyle(
@@ -113,20 +113,55 @@ class _PhoneState extends State<Phone> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Container(
-                              width: 223,
-                              margin: EdgeInsets.only(top:10,bottom: 15),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  hintText: 'Enter OTP',
-                                  border: OutlineInputBorder(),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    padding: EdgeInsets.only(left: 11,right: 11,),
+                                    decoration: BoxDecoration(
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(7),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        Text('   ',style: TextStyle(
+                                          color:Color.fromRGBO(60, 52, 94, 1),
+                                        ),),
+                                        Text('India',style: TextStyle(
+                                          fontSize: 9,
+                                          color: Color.fromRGBO(60, 52, 94, 1),
+                                        ),),
+                                      ],
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                SizedBox(width: 10,),
+                                Expanded(
+                                  flex: 4,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.only(top: 20,bottom: 10),
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            hintText: 'Enter OTP',
+                                            border: OutlineInputBorder(),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                             Container(
                               padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
                               decoration: BoxDecoration(
-                                color:Color.fromRGBO(255, 176, 0, 1),
+                                color:Color.fromRGBO(255, 175, 0, 1),
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: Text('Resend',style: TextStyle(
@@ -141,6 +176,7 @@ class _PhoneState extends State<Phone> {
                   Expanded(
                     flex: 2,
                       child: Container(
+                        margin: EdgeInsets.only(top: 7),
                         alignment: AlignmentDirectional.bottomEnd,
                         child: FloatingActionButton(
                           onPressed: () {

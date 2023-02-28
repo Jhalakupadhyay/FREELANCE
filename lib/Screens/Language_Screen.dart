@@ -23,7 +23,7 @@ class _LanguageState extends State<Language> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
           border: Border.all(
-            color: Color.fromRGBO(255, 176, 0, 1),
+            color: Color.fromRGBO(255, 175, 0, 1),
           ),
         ),
         child: Column(
@@ -110,7 +110,7 @@ class _LanguageState extends State<Language> {
                       height: MediaQuery.of(context).size.height / 4.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color.fromRGBO(255, 176, 0, 1),
+                        color: Color.fromRGBO(255, 175, 0, 1),
                       ),
                       child: Text('Hindi',style: TextStyle(color: Colors.black),),
                     ),

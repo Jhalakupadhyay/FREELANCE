@@ -169,7 +169,7 @@ class _ChallengeState extends State<Challenge> {
               height: 40,
               width: MediaQuery.of(context).size.width/2,
               decoration: BoxDecoration(
-                color: Color.fromRGBO(255, 176, 0, 1),
+                color: Color.fromRGBO(255, 175, 0, 1),
                 borderRadius: BorderRadius.circular(10)
               ),
               child: Text('Create Video',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),),

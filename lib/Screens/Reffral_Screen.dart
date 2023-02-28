@@ -57,7 +57,7 @@ class _ReffralState extends State<Reffral> {
                       Container(
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
-                            border: Border.all(color: Color.fromRGBO(255, 176, 0, 1),),
+                            border: Border.all(color: Color.fromRGBO(255, 175, 0, 1),),
                           borderRadius: BorderRadius.circular(5),
                         ),
                         child: Text('Copy'),
